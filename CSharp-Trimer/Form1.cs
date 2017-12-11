@@ -151,6 +151,12 @@ namespace CSharp_Trimer
             int Wo = imgSrc.Width;
             int Ho = imgSrc.Height;
 
+            int Oh = ((Ho - Ht) / stride) + 1;
+            int Ow = ((Wo - Wt) / stride) + 1;
+
+
+            this.progressBar1.Maximum = Oh * Ow;
+
             Stopwatch sw = new Stopwatch();
             sw.Start();
             int cnt = 0;
@@ -183,7 +189,9 @@ namespace CSharp_Trimer
 
                         this.BeginInvoke(new Action(() =>
                         {
-                            this.textBox_Debug.Text = $"{cnt} :: x{x},y{y} {sw.ElapsedMilliseconds}ms";
+                            this.textBox_Debug.Text = $"{cnt}/{Oh*Ow} :({Wo}x{Ho} s{stride}) - (x{x},y{y}) ";
+                            this.textBox_sw.Text = $"{sw.Elapsed}s ";
+                            this.progressBar1.Value = cnt;
                         }), null);
 
                         cnt++;
@@ -194,8 +202,6 @@ namespace CSharp_Trimer
             });
 
             sw.Stop();
-            this.textBox_Debug.Text = $"{cnt}: Elapsed time = {sw.ElapsedMilliseconds} ms";
-
 
         }
 

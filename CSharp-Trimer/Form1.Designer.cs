@@ -41,6 +41,8 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_Debug = new System.Windows.Forms.TextBox();
+            this.textBox_sw = new System.Windows.Forms.TextBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_OriginImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -163,11 +165,27 @@
             this.textBox_Debug.Size = new System.Drawing.Size(290, 19);
             this.textBox_Debug.TabIndex = 10;
             // 
+            // textBox_sw
+            // 
+            this.textBox_sw.Location = new System.Drawing.Point(12, 457);
+            this.textBox_sw.Name = "textBox_sw";
+            this.textBox_sw.Size = new System.Drawing.Size(290, 19);
+            this.textBox_sw.TabIndex = 11;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(12, 483);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(291, 23);
+            this.progressBar1.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 513);
+            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.textBox_sw);
             this.Controls.Add(this.textBox_Debug);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDown1);
@@ -202,6 +220,8 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_Debug;
+        private System.Windows.Forms.TextBox textBox_sw;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
